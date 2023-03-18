@@ -90,15 +90,32 @@
 //     }
 // }
 
-
 var pembelian = 50000;
-var coupon = "FreeOngkir";
-var total = 5;
+var coupon = 'FreeOngkir';
 
-if (coupon = "FreeOngkir"){
-if ((pembelian => 50000) && (total == 5)){
-    console.log("Total Pembelian anda Rp. ".total)
-}else if ((pembelian => 30000) && (total == 5))
-}else{
+switch (coupon) {
+  case 'FreeOngkir':
+    // ......
+    if (pembelian >= 50000) {
+      console.log('Pembelian = ' + pembelian);
+      console.log('Potongan 10% sebesar =' + pembelian * 0.1);
+      console.log('yang harus dibayar =' + (pembelian - pembelian * 0.1));
+    } else if (pembelian >= 30000 && pembelian < 50000) {
+      console.log('potongan 5%');
+    } else if (pembelian < 30000) {
+      console.log('potongan 2.5%');
+    }
+    break;
+  case 'Free15%':
+    // .....
+    if (pembelian >= 30000) {
+      console.log('potongan 15%');
+    } else {
+      console.log('tidak ada potongan');
+    }
+    break;
 
+  default:
+    console.log('tidak ada coupon');
+    break;
 }
