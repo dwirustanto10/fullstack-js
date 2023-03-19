@@ -77,6 +77,10 @@ function calculatorUtama(a, b, operasi) {
   return hasil;
 }
 
-var result = calculatorUtama(3, 4, 'kali');
+// var result = calculatorUtama(4, 4, 'bagi');
+var result = calculatorUtama(8, 4, 'bagi');
+var memory = [0];
+memory.push(result);
 
 console.log(result);
+console.log(memory);

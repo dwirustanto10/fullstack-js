@@ -90,8 +90,8 @@
 //     }
 // }
 
-var pembelian = 50000;
-var coupon = 'FreeOngkir';
+var pembelian = 40000;
+var coupon = 'Free15%';
 
 switch (coupon) {
   case 'FreeOngkir':
@@ -101,15 +101,21 @@ switch (coupon) {
       console.log('Potongan 10% sebesar =' + pembelian * 0.1);
       console.log('yang harus dibayar =' + (pembelian - pembelian * 0.1));
     } else if (pembelian >= 30000 && pembelian < 50000) {
-      console.log('potongan 5%');
+      console.log('Pembelian = ' + pembelian);
+      console.log('Potongan 5% sebesar =' + pembelian * 0.05);
+      console.log('yang harus dibayar =' + (pembelian - pembelian * 0.05));
     } else if (pembelian < 30000) {
-      console.log('potongan 2.5%');
+      console.log('Pembelian = ' + pembelian);
+      console.log('Potongan 2.5% sebesar =' + pembelian * 0.025);
+      console.log('yang harus dibayar =' + (pembelian - pembelian * 0.025));
     }
     break;
   case 'Free15%':
     // .....
     if (pembelian >= 30000) {
-      console.log('potongan 15%');
+      console.log('Pembelian = ' + pembelian);
+      console.log('Potongan 15% sebesar =' + pembelian * 0.15);
+      console.log('yang harus dibayar =' + (pembelian - pembelian * 0.15));
     } else {
       console.log('tidak ada potongan');
     }
