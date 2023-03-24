@@ -33,54 +33,86 @@
 //   return arrayLength;
 // }
 // console.log(jmlKata('selamat siang kawan ku semua'));
+// var memory = [0];
 
-function kali(a, b) {
-  return a * b;
+// function kali(a, b) {
+//   return a * b;
+// }
+
+// function bagi(a, b) {
+//   return a / b;
+// }
+
+// function tambah(a, b) {
+//   return a + b;
+// }
+
+// function kurang(a, b) {
+//   return a - b;
+// }
+// function modulus(a, b) {
+//   return a % b;
+// }
+// function calculatorUtama(a, b, operasi) {
+//   var hasil;
+//   switch (operasi) {
+//     case '*':
+//       hasil = kali(a, b);
+//       break;
+//     case '/':
+//       hasil = bagi(a, b);
+//       break;
+//     case '+':
+//       hasil = tambah(a, b);
+//       break;
+//     case '-':
+//       hasil = kurang(a, b);
+//       break;
+//     case '%':
+//       hasil = modulus(a, b);
+//       break;
+
+//     default:
+//       hasil = 0;
+//   }
+//   return hasil;
+// }
+
+// // var result = calculatorUtama(4, 4, 'bagi');
+// var result = calculatorUtama(8, 4, '%');
+// memory.push(result);
+
+// console.log(result);
+// console.log(memory);
+
+function segitiga(a, t) {
+  return a * t * 0.5;
+}
+function persegi(a, t) {
+  return a * t;
+}
+function lingkaran(a, t) {
+  return a * t * 3.14;
 }
 
-function bagi(a, b) {
-  return a / b;
-}
-
-function tambah(a, b) {
-  return a + b;
-}
-
-function kurang(a, b) {
-  return a - b;
-}
-function modulus(a, b) {
-  return a % b;
-}
-function calculatorUtama(a, b, operasi) {
+function luasBangun(a, t, bangun) {
   var hasil;
-  switch (operasi) {
-    case 'kali':
-      hasil = kali(a, b);
+  switch (bangun) {
+    case 'segi':
+      hasil = segitiga(a, t);
       break;
-    case 'bagi':
-      hasil = bagi(a, b);
+    case 'kotak':
+      hasil = persegi(a, t);
       break;
-    case 'tambah':
-      hasil = tambah(a, b);
+    case 'bulat':
+      hasil = lingkaran(a, t);
       break;
-    case 'kurang':
-      hasil = kurang(a, b);
-      break;
-    case 'modulus':
-      hasil = modulus(a, b);
-      break;
-
     default:
-      hasil = 0;
+      hasil = 'belum ada';
+      break;
   }
   return hasil;
 }
 
-// var result = calculatorUtama(4, 4, 'bagi');
-var result = calculatorUtama(8, 4, 'bagi');
-var memory = [0];
-memory.push(result);
-
-console.log(result);
-console.log(memory);
+var hasilLuas = luasBangun(2, 2, 'bulat');
+console.log(hasilLuas);
